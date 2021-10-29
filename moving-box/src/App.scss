@@ -1,0 +1,161 @@
+#parent {
+  display: flex;
+  transform: translate(20%, 20%);
+}
+
+#box-container {
+  width: 400px;
+  height: 400px;
+  margin-left: 10% auto;
+  margin-bottom: 10% auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: lawngreen;
+}
+
+#buttons {
+  padding-left: 10px;
+}
+
+#btn-forward {
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #8ed38e;
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
+  color: purple;
+  border-color: #8ed38e;
+}
+
+#btn-backward {
+  cursor: pointer;
+  background-color: skyblue;
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: skyblue;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+
+@mixin animation($animation) {
+  animation: $animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+#slide-right-forward {
+  @include animation(slide-right-forward);
+}
+
+#slide-down-forward {
+  @include animation(slide-down-forward);
+}
+
+#slide-left-forward {
+  @include animation(slide-left-forward);
+}
+
+#slide-top-forward {
+  @include animation(slide-top-forward);
+}
+
+#slide-right-backward {
+  @include animation(slide-right-backward);
+}
+
+#slide-down-backward {
+  @include animation(slide-down-backward);
+}
+
+#slide-left-backward {
+  @include animation(slide-left-backward);
+}
+
+#slide-top-backward {
+  @include animation(slide-top-backward);
+}
+
+@keyframes slide-right-forward {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(300px, 0);
+  }
+}
+
+@keyframes slide-down-forward {
+  from {
+    transform: translate(300px, 0);
+  }
+
+  to {
+    transform: translate(300px, 300px);
+  }
+}
+
+@keyframes slide-left-forward {
+  from {
+    transform: translate(300px, 300px);
+  }
+
+  to {
+    transform: translate(0, 300px);
+  }
+}
+
+@keyframes slide-top-forward {
+  from {
+    transform: translate(0, 300px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-right-backward {
+  from {
+    transform: translate(0, 300px);
+  }
+
+  to {
+    transform: translate(300px, 300px);
+  }
+}
+
+@keyframes slide-down-backward {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 300px);
+  }
+}
+
+@keyframes slide-left-backward {
+  from {
+    transform: translate(300px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-top-backward {
+  from {
+    transform: translate(300px, 300px);
+  }
+
+  to {
+    transform: translate(300px, 0);
+  }
+}
